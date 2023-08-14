@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="../plugins/fontawesome-free/css/all.min.css">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="../plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" referrerpolicy="no-referrer" />
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../dist/css/adminlte.min.css">
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="../plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="../plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+  <link rel="stylesheet" href="../plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../dist/css/adminlte.min.css">
+</head>
+<body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
+<div class="wrapper">
+
+  <!-- Preloader -->
+  <div class="preloader flex-column justify-content-center align-items-center">
+    <img class="animation__wobble" src="../dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
+  </div>
+
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-dark">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="../index.html" class="nav-link"><i class="fa-solid fa-house" style="color: #0dcfcf;"></i></a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="../login.html" class="nav-link"><i class="fa-solid fa-right-from-bracket fa-spin" style="color: #f50025;"></i></a>
+      </li>
+    </ul>
+
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto">
+      <!-- Navbar Search -->
+      <li class="nav-item">
+        <a class="nav-link" data-widget="navbar-search" href="#" role="button">
+          <i class="fas fa-search"></i>
+        </a>
+        <div class="navbar-search-block">
+          <form class="form-inline">
+            <div class="input-group input-group-sm">
+              <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+              <div class="input-group-append">
+                <button class="btn btn-navbar" type="submit">
+                  <i class="fas fa-search"></i>
+                </button>
+                <button class="btn btn-navbar" type="button" data-widget="navbar-search">
+                  <i class="fas fa-times"></i>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </li>
+
+  
+      <!-- Notifications Dropdown Menu -->
+      <li class="nav-item">
+        <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+          <i class="fas fa-expand-arrows-alt"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <!-- /.navbar -->
+
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="../index.html" class="brand-link">
+      <img src="../dist/img/R.jpg" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <span class="brand-text font-weight-light">Central Rodil</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user panel (optional) -->
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+          <img src="../dist/img/avatar5.png" class="img-circle elevation-2" alt="User Image">
+        </div>
+        <div class="info">
+          <a href="../index.html" class="d-block">Admin</a>
+        </div>
+      </div>
+
+      <!-- SidebarSearch Form -->
+      <div class="form-inline">
+        <div class="input-group" data-widget="sidebar-search">
+          <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+          <div class="input-group-append">
+            <button class="btn btn-sidebar">
+              <i class="fas fa-search fa-fw"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+               <li class="nav-item ">
+                <a href="#" class="nav-link active">
+                  <i class="fa-solid fa-users fa-bounce"></i>
+                  <p>
+                    Mantenimiento
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="tabla.html" class="nav-link active">
+                      <i class="far fa-circle nav-icon"></i>  
+                      <p>Chefs</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>    
+          <li class="nav-item">
+            <a href="#" class="nav-link active">
+              <i class="fa-solid fa-clipboard-list fa-fade"></i>
+              <p>
+                Destacados
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="../vistas/lista.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Lista de Chefs</p>
+                </a>
+              </li>
+            </ul>
+          </li>   
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
+
+ 
+ <!-- Content Wrapper. Contains page content -->
+ <div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">    
+        <div class="col-sm-6">
+          <ol class="breadcrumb float-sm-right">
+            <li class=" container text-center">Lista de Chefs</li>
+          </ol>
+        </div>
+      </div>
+    </div><!-- /.container-fluid -->
+  </section>
+
+  <!-- Main content -->
+  <section class="content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          <!-- /.card -->
+
+          <div class="card">
+            <!-- /.card-header -->
+            <div class="card-body">
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-square-plus fa-spin"></i></button>
+              <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                  <th>Nombre</th>
+                  <th>Apellidos</th>
+                  <th>Pais</th>
+                  <th>Correo</th>
+                  <th>Accion</th>
+                </tr>
+                </thead>
+                <tbody id="salida">
+      
+              </table>
+
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Registrar Chef</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <label for="nombre" class="form-label">Nombre</label>
+                                <input type="text" class="form-control" id="nombre" placeholder="Ingresar Nombre">
+                            </div>
+                            <div class="col-lg-4">
+                                <label for="apellido" class="form-label">Apellidos</label>
+                                <input type="text" class="form-control" id="apellido" placeholder="Ingresar Apellido">
+                            </div>
+                            <div class="col-lg-4">
+                              <label for="pais" class="form-label">Pais</label>
+                              <input type="text" class="form-control" id="pais" placeholder="Ingresar Pais">
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-lg-12">
+                              <label for="correo" class="form-label">Correo</label>
+                              <input type="text" class="form-control" id="correo" placeholder="Ingresar Correo">
+                          </div>
+                      </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-primary" onclick="Guardar()">Guardar</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+           <!-- editar -->
+           <div class="modal fade" id="editarChef" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Editar Chef</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <input type="number" id="pos" hidden>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <label for="nombreEditar" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="nombreEditar" placeholder="Ingresar Nombre">
+                        </div>
+                        <div class="col-lg-4">
+                            <label for="apellidoEditar" class="form-label">Apellidos</label>
+                            <input type="text" class="form-control" id="apellidoEditar" placeholder="Ingresar Apellido">
+                        </div>
+                        <div class="col-lg-4">
+                          <label for="paisEditar" class="form-label">Pais</label>
+                          <input type="text" class="form-control" id="paisEditar" placeholder="Ingresar Pais">
+                      </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <label for="correoEditar" class="form-label">Correo</label>
+                            <input type="text" class="form-control" id="correoEditar" placeholder="Ingresar Correo">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary" onclick="GuardarEditar()">Editar</button>
+                </div>
+            </div>
+            </div>
+       </div>
+
+            </div>
+            
+          </div>
+          <!-- /.card -->
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+
+    <div aria-live="polite" aria-atomic="true" class="position-relative">
+      <div class="toast-container top-0 end-0 p-3"> 
+        <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+          <div class="toast-header">
+            <div class="rounded me-2" ><i class="fa-regular fa-floppy-disk" ></i></div>
+            
+            <strong class="me-auto"></strong>
+            <small class="text-body-secondary"></small>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+          </div>
+          <div class="toast-body">
+            Se guardo
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+
+  <!-- Main Footer -->
+  <footer class="main-footer">
+    <div class="container text-center">
+      <div class="row">
+      <div class="col-md-4">
+        <h6>Dirección</h6>
+        <div class="contact-item">
+          <p>4321 California St,</p>
+          <p>San Francisco, CA 1222</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <h6>Horario</h6>
+        <div class="contact-item">
+          <p>Lunes-Jueves: 10:00 AM - 11:00 PM</p>
+          <p>Viernes-Sabado: 11:00 AM - 02:00 AM</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <h6>Contacto</h6>
+        <div class="contact-item">
+          <p>Telefono: 7377397</p>
+          <p>Email: info@company.com</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  </footer>
+</div>
+<!-- ./wrapper -->
+
+<!-- REQUIRED SCRIPTS -->
+<!-- jQuery -->
+<script src="../plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap -->
+<script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- overlayScrollbars -->
+<script src="../plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../dist/js/adminlte.js"></script>
+
+<!-- PAGE PLUGINS -->
+<!-- jQuery Mapael -->
+<script src="../plugins/jquery-mousewheel/jquery.mousewheel.js"></script>
+<script src="../plugins/raphael/raphael.min.js"></script>
+<script src="../plugins/jquery-mapael/jquery.mapael.min.js"></script>
+<script src="../plugins/jquery-mapael/maps/usa_states.min.js"></script>
+<!-- ChartJS -->
+<script src="../plugins/chart.js/Chart.min.js"></script>
+
+<!-- AdminLTE for demo purposes -->
+<script src="../dist/js/demo.js"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="../dist/js/pages/dashboard2.js"></script>
+
+<!-- AdminLTE App -->
+<script src="../dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="../dist/js/demo.js"></script>
+
+<!-- jQuery -->
+<script src="../plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- DataTables  & Plugins -->
+<script src="../plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="../plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="../plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="../plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<script src="../plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+<script src="../plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+<script src="../plugins/jszip/jszip.min.js"></script>
+<script src="../plugins/pdfmake/pdfmake.min.js"></script>
+<script src="../plugins/pdfmake/vfs_fonts.js"></script>
+<script src="../plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+<script src="../plugins/datatables-buttons/js/buttons.print.min.js"></script>
+<script src="../plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+<script src="../plugins/"></script>
+
+
+<script>
+let isLogin = localStorage.getItem("isLogin");
+  console.log(isLogin);
+  if(isLogin == null || isLogin == "False") {
+    location.href = "login.html"
+  }
+  $(function () {
+    $("#example1").DataTable({
+      "responsive": true, "lengthChange": false, "autoWidth": false,
+      "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+    }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+    $('#example2').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": false,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false,
+      "responsive": true,
+    });
+  });
+
+  let vecPersona = new Array();
+      function MostrarToast() {
+        var toastElList = [].slice.call(document.querySelectorAll('.toast'))
+        var toastList = toastElList.map(function(toastEl) {
+          return new bootstrap.Toast(toastEl)
+        })
+        toastList.forEach(toast => toast.show())
+      }
+
+  function Guardar() {
+        let nombre = document.getElementById("nombre").value
+        let apellido = $("#apellido").val();
+        let pais=$("#pais").val();
+        let correo = document.getElementById("correo").value;
+        if(nombre == "" || apellido == "" || pais== "" || correo=="") {
+          alert("Debe completar el formulario");
+          return;
+        }
+        let objPersona = {
+          nom: nombre,
+          ape: apellido,
+          pai:pais,
+          corr: correo
+        }
+        vecPersona.push(objPersona);
+        $("#exampleModal").modal('hide');
+        Mostrar();
+        Limpiar();
+        MostrarToast();
+      }
+
+      function Mostrar() {
+        let salida = "";                                                                 
+        for (let index = 0; index < vecPersona.length; index++) { 
+            let tr = "<tr>";
+                tr = tr + "<td>" + vecPersona[index].nom + "</td>"; 
+                tr = tr + "<td>" + vecPersona[index].ape + "</td>";                                                                                 
+                tr = tr + "<td>" + vecPersona[index].pai + "</td>";
+                tr = tr + "<td>" + vecPersona[index].corr + "</td>";
+                let btnEliminar = "<button type='button' class='btn btn-danger' onclick='Eliminar(" + index + ")' ><i class='fa-solid fa-trash fa-shake' style='color: #511f24;'></i></button>";
+                let btnEditar = "<button type='button' class='btn btn-success separar' onclick='Editar(" + index + ")' ><i class='fa-solid fa-pencil fa-bounce' style='color: #1f5147;''></i></button>";
+                tr = tr + "<td>" + btnEliminar + btnEditar + "</td>";
+           tr = tr + "</tr>"
+           salida = salida + tr;
+        }
+        document.getElementById("salida").innerHTML = salida;
+      }
+
+      function Editar(index) {
+        document.getElementById("pos").value = index;
+        document.getElementById("nombreEditar").value = vecPersona[index].nom;
+        $("#apellidoEditar").val(vecPersona[index].ape);
+        document.getElementById("correoEditar").value = vecPersona[index].corr
+        document.getElementById("paisEditar").value = vecPersona[index].pai
+        $("#editarChef").modal('show');
+      }
+      function GuardarEditar() {
+        let index = $("#pos").val();
+        let nombre = document.getElementById("nombreEditar").value;
+        let apellido = document.getElementById("apellidoEditar").value;
+        let correo = document.getElementById("correoEditar").value;
+        let pais=document.getElementById("paisEditar").value;
+        vecPersona[index].nom = nombre;
+        vecPersona[index].ape = apellido;
+        vecPersona[index].corr = correo;
+        vecPersona[index].pai = pais;
+        Mostrar();
+        $("#editarChef").modal('hide');
+      }
+      function Limpiar() {
+        $("#nombre").val("");
+        $("#apellido").val("");
+        document.getElementById("correo").value = "";
+        $("#pais").val("");
+      }
+      function Eliminar(index) {
+        vecPersona.splice(index, 1);
+        Mostrar();
+      }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
